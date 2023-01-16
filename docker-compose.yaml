@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  gitbi:
+    image: pieca/gitbi:0.1
+    ports:
+    - 8000:8000
+    restart: always
+    volumes:
+      - ./:/gitbi_repo
+    secrets:
+      - secret_pokemon_conn
+    environment:
+      - GITBI_REPO_DIR=/gitbi_repo
+      - GITBI_POKEMON_TYPE=sqlite
+      - GITBI_POKEMON_CONN_FILE=/run/secrets/secret_pokemon_conn
+      - GITBI_SUICIDE_TYPE=sqlite
+      - GITBI_SUICIDE_CONN=/gitbi_repo/suicide.sqlite
+
+secrets:
+  secret_pokemon_conn:
+    file: ./secret_pokemon_conn.txt
