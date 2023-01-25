@@ -1,5 +1,5 @@
 {
-    "mark": "rect",
+    "mark": {"type": "rect", "tooltip": true},
     "encoding": {
         "x": {
             "field": "type1",
