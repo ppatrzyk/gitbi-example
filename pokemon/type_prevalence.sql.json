@@ -1,0 +1,17 @@
+{
+    "mark": "rect",
+    "encoding": {
+        "x": {
+            "field": "type1",
+            "type": "nominal"
+        },
+        "y": {
+            "field": "type2",
+            "type": "nominal"
+        },
+        "color": {
+            "field": "count",
+            "type": "quantitative"
+        }
+    }
+}
