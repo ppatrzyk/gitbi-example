@@ -2,7 +2,7 @@ version: '3'
 
 services:
   gitbi:
-    image: pieca/gitbi:0.1
+    image: pieca/gitbi:0.5
     ports:
     - 8000:8000
     restart: always
@@ -16,6 +16,12 @@ services:
       - GITBI_POKEMON_CONN_FILE=/run/secrets/secret_pokemon_conn
       - GITBI_SUICIDE_TYPE=sqlite
       - GITBI_SUICIDE_CONN=/gitbi_repo/suicide.sqlite
+      # Uncomment these to set up basic http auth and enable emails
+      # - GITBI_AUTH=admin:password
+      # - GITBI_SMTP_USER=smtp@example.com
+      # - GITBI_SMTP_PASS=password
+      # - GITBI_SMTP_URL=smtp.example.com:587
+      # - GITBI_SMTP_EMAIL=donotreply@example.com
 
 secrets:
   secret_pokemon_conn:
