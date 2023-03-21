@@ -1,17 +1,1 @@
-{
-    "mark": {"type": "rect", "tooltip": true},
-    "encoding": {
-        "x": {
-            "field": "type1",
-            "type": "nominal"
-        },
-        "y": {
-            "field": "type2",
-            "type": "nominal"
-        },
-        "color": {
-            "field": "count",
-            "type": "quantitative"
-        }
-    }
-}
+{"type":"bar","xaxis":"type1","yaxis":"count","group":"_NONE"}

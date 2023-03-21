@@ -1,18 +1,1 @@
-{
-    "repeat": {"layer": ["avg_hp", "avg_attack", "avg_defense", "avg_speed"]},
-    "spec": {
-        "mark": {"type": "bar", "tooltip": true},
-        "encoding": {
-        "x": {
-            "field": "type1",
-            "type": "nominal"
-        },
-        "y": {
-            "field": {"repeat": "layer"},
-            "type": "quantitative"
-        },
-        "color": {"datum": {"repeat": "layer"}, "title": "Skill"},
-        "xOffset": {"datum": {"repeat": "layer"}}
-        }
-    }
-}
+{"type":"scatter","xaxis":"avg_defense","yaxis":"avg_attack","group":"type1"}
