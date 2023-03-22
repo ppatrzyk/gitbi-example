@@ -4,4 +4,4 @@ select
     count(*) as count
 from pokemons
 group by type1
-order by type1 desc;
+order by count desc;
