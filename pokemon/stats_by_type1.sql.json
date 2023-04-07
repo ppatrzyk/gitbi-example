@@ -1,1 +1,1 @@
-{"type":"scatter","xaxis":"avg_defense","yaxis":"avg_attack","group":"type1"}
+{"type":"scatter","xaxis":"avg_defense","yaxis":"avg_attack","zaxis":"count","group":"type1"}

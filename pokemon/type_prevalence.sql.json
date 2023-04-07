@@ -1,1 +1,1 @@
-{"type":"bar","xaxis":"type1","yaxis":"count","group":"_NONE"}
+{"type":"heatmap","xaxis":"type1","yaxis":"type2","zaxis":"count","group":"_NONE"}

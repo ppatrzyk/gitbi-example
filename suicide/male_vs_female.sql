@@ -1,25 +1,28 @@
--- places with biggest difference in male vs female suicide rate
+-- male vs female suicide rate in some countries (2014)
 create temp table males as
     select
         country,
-        year,
         age,
         suicides_per100k as male_rate
     from suicides
-    where sex = 'male';
+    where 
+        sex = 'male' and 
+        year = 2014 and 
+        country in ('United States', 'Japan', 'Poland', 'South Africa');
 
 create temp table females as
     select
         country,
-        year,
         age,
         suicides_per100k as female_rate
     from suicides
-    where sex = 'female';
+    where 
+        sex = 'female' and 
+        year = 2014 and 
+        country in ('United States', 'Japan', 'Poland', 'South Africa');
 
 select 
     m.country,
-    m.year,
     m.age,
     m.male_rate,
     f.female_rate,
@@ -28,7 +31,5 @@ from males m
 inner join females f
 on 
     m.country = f.country and
-    m.year = f.year and
     m.age = f.age
-order by male_to_female_ratio desc
-limit 50;
+order by male_to_female_ratio desc;
