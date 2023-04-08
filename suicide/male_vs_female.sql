@@ -8,7 +8,7 @@ create temp table males as
     where 
         sex = 'male' and 
         year = 2014 and 
-        country in ('United States', 'Japan', 'Poland', 'South Africa');
+        country in ('United States', 'Japan', 'Poland', 'Germany');
 
 create temp table females as
     select
@@ -19,7 +19,7 @@ create temp table females as
     where 
         sex = 'female' and 
         year = 2014 and 
-        country in ('United States', 'Japan', 'Poland', 'South Africa');
+        country in ('United States', 'Japan', 'Poland', 'Germany');
 
 select 
     m.country,
