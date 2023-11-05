@@ -1,3 +1,3 @@
 # pokemon stats
 from pokemons
-select [name, attack, defense, legendary]
+select {name, attack, defense, legendary}
